@@ -1,0 +1,19 @@
+export const appRoutes=[
+    {
+        path:'',
+        redirectTo:'list',
+        pathMatch:'full'
+    },
+    {
+        path:'list',
+        loadChildren:'./pages/list/list.module#ListModule'
+    },
+    {
+        path:'product',
+        loadChildren:'./pages/product/product.module#ProductModule'
+    },
+    {
+        path:'**',
+        loadChildren:'./pages/list/list.module#ListModule'
+    }
+];
